@@ -391,7 +391,7 @@ main a {
 /* Small devices */
 @media only screen and (min-width: 428px) and (max-width: 540px) {
   #intro {
-    font-size: 5.7vh !important;
+    font-size: 5.5vh !important;
     margin: 15% 0 3% 0 !important;
   }
   li, #closeMenuBtn {
