@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7cf3b9a7d2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles/contact_styles.css">
+    </head>
+    <body>
+        <main>
+            <section id="overLay"></section>
+            <header>
+                <h1>
+                    <span style="border-bottom: 3px solid #f9f9f9">Get</span> In Touch
+                </h1>
+            </header>
+            <div id="backBtn">
+                <a href="projects.html">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            <nav>
+                <section id="navBtn">
+                    <div class="line lineOne"></div>
+                    <div class="line lineTwo"></div>
+                    <div class="line lineThree"></div>
+                </section>  
+            </nav>
+            <div id="navMenu">
+                <ul>
+                    <div id="closeMenuBtn">X</div>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                        <div class="underline"></div>
+                    <li>
+                        <a href="about.html">ABOUT</a>
+                    <li>
+                        <div class="underline"></div>
+                    <li>
+                        <a href="skills.html">SKILLS</a>
+                    </li>
+                        <div class="underline"></div>
+                    <li>
+                        <a href="projects.html">PROJECTS</a>
+                    </li>
+                        <div class="underline"></div>
+                    <li>
+                        <a href="contact.html">CONTACT</a>
+                    </li>
+                        <div class="underline"></div>
+                </ul>
+            </div>
+            <section id="contactBox">
+                <form id="contactForm" action="localhost:8080/email" method="POST">
+                    <label class="label" for="name">Name: *</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label class="label" for="email">Email: *</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label class="label" for="messageBox">Message: *</label><br>
+                    <textarea id="messageBox" name="message" required></textarea><br>
+                    <input id="submitBtn" type="submit" value="SEND">
+                </form>
+            </section>
+            <section id="socialMedia">
+                <i class="fab fa-facebook"></i>
+                <a href="https://www.linkedin.com/in/jason-bryant-8b8127206" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/bryantjc_?s=09" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/jcbryant35" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+        </main> 
+        <script src="./scripts/contact.js" async defer></script>
+    </body>
+</html>

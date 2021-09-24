@@ -1,0 +1,352 @@
+@import '_reset.scss';
+@import '_variables.scss';
+
+html {
+    background-color: $color2;
+}
+
+body > main {
+    animation: pageSlideIn 1s ease-in-out;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background-color: $color1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#backBtn {
+    z-index: 1;
+    height: 3em;
+    width: 5em;
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    animation: fadeIn 10s;
+}
+
+i {
+    color: $color2;
+    font-size: 1.5em;
+}
+
+nav {
+    height: 5rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    #logo {
+        height: 100%;
+        width: 80%;
+       h1 {
+        color: $color2;
+        font-size: 3.5vw;
+        margin-left: 15px; 
+        margin-top: 10px;  
+        font-family: $font1;
+        font-weight: 400;
+        }
+        #firstName {
+            color: $color3;
+        }
+    }
+    #navBtn {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation: fadeIn 10s;
+       .line {
+           height: 3px;
+           margin: 3px;
+           margin-left: auto;
+           background-color: $color3;
+       }
+       .lineOne {
+           width: 15px;
+       }
+       .lineTwo {
+           width: 25px;
+       }
+       .lineThree {
+           width: 18px;
+       }
+    }
+}
+
+#navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $color1;
+    z-index: 1;
+    text-align: center;
+    display: none;
+    ul {
+        animation-name: navLinkFadeIn;
+        animation-duration: 3s;
+    }
+    li {
+        color: $color3;
+        font-size: 4vh;
+        margin-top: 5px;
+        font-family: $font2;
+        list-style-type: none;
+        letter-spacing: 1px;
+        a {
+            color: $color2;
+            text-decoration: none;
+        }
+    }
+    .underline {
+        height: 1px;
+        width: 50vw;
+        background-color: $color2;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    #closeMenuBtn {
+        color: $color2;
+        width: 10%;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 4vh;
+        font-family: $font1;
+    }
+}
+
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+   #myImg {
+    height: 175px;
+    width: 175px;
+    border-radius: 100%;
+    margin-top: 30px;
+    animation: imgSlideIn 2.7s ease-in-out;
+    }
+}
+
+#bioContainer {
+    height: auto;
+    width: 80vw;
+    h1 {
+        color: $color2;
+        font-size: 2.8vh;
+        padding: 5px;
+        letter-spacing: 1.5px;
+        font-family: $font1;
+        line-height: 45px;
+        #firstName {
+            color: $color2;
+        }
+        .brackets {
+            color: $color4;
+        }
+        #jobTitle {
+            color: $color2;
+        }
+    }
+}
+
+#bottomLine {
+    height: 3px;
+    width: 90%;
+    background-color: $color4;
+    margin-top: 45px;
+}
+
+/* Animations
+***********************************************************/
+@keyframes navSlideDown {
+    from {height: 0%;}
+    to {height: 80%;}
+}
+
+@keyframes navSlideUp {
+    from {height: 80%;}
+    to {height: 0%;}
+}
+
+@keyframes navLinkFadeIn {
+    from {opacity: 0;}
+    to {opacity: 10;}
+}
+
+@keyframes pageSlideIn {
+    from {
+        margin-left: -1000px;
+        border-radius: 100%;
+        opacity: 0;
+    }
+    to {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes imgSlideIn {
+    from {
+    margin-left: -1500px;
+    transform: rotate(-360deg);
+    opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+
+/* Responsive Media Queries 
+***************************************************************/
+/* Extra extra small devices */ 
+@media only screen and (width: 375px) {
+    #bioContainer {
+        h1 {
+            font-size: 2vh !important;
+        }
+    }
+    li {
+        font-size: 3vh !important;
+    }        
+
+}
+
+/* Extra small devices */ 
+@media only screen and (max-width: 400px) {
+    #bioContainer {
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        h1 {
+            font-size: 3.5vw;
+        }
+        .underline {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+/* Extra small devices */
+@media only screen and (width: 411px) {
+    h1 {
+        font-size: 2vh !important;
+    }
+    li {
+        font-size: 3vh !important;
+    }
+}
+
+/* Small devices */
+@media only screen and (min-width: 428px) and (max-width: 540px) {
+    #imageContainer {
+        margin-top: 20%;
+    }
+    h1 {
+        font-size: 2vh !important;
+    }
+    li, #closeMenuBtn {
+        font-size: 3vh !important;
+    }
+}
+
+/* Tablets */
+@media only screen and (width: 768px) {
+    #imageContainer {
+        margin-top: 20%;
+    }
+    h1 {
+        font-size: 2vh !important;
+    }
+    li, #closeMenuBtn {
+        font-size: 2.5vh !important;
+    }
+}
+
+@media only screen and (width: 1024px) {
+    li, #closeMenuBtn {
+        font-size: 2.5vh !important;
+    }
+    #imageContainer {
+        margin-top: 20%;
+    }
+    h1 {
+        font-size: 2.5vw !important;
+    }
+}
+
+
+/* Extra large devices */
+@media only screen and (min-width: 1200px) {
+    #navMenu {
+        height: 100%;
+    }
+    ul {
+        animation: navLinkFadeIn 5s !important;
+        a {
+            &:hover {
+                color: $color3 !important;
+            }
+        }
+        .underline {
+            width: 20vw !important;
+        }
+    }
+    #navBtn {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #closeMenuBtn {
+        &:hover {
+            cursor: pointer;
+            color: $color3 !important;
+        }
+    }
+    #bioWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    #bioContainer {
+        width: 40%;
+    }
+    #bottomLine {
+        width: 100%;
+    }
+    @keyframes navSlideDown {
+        from {height: 0%;}
+        to {height: 100%;}
+    }
+    
+    @keyframes navSlideUp {
+        from {height: 100%;}
+        to {height: 0%;}
+    } 
+
+    @keyframes navLinkFadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+}

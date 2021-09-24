@@ -1,0 +1,483 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url("../images/porthome.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat";
+  -webkit-animation: pageFadeIn 2s ease-out;
+          animation: pageFadeIn 2s ease-out;
+}
+
+#overLay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(11, 11, 11, 0.8);
+}
+
+header {
+  padding: 15px 0px 15px 0px;
+  background-color: #0b0b0b;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+header h1 {
+  color: #737373;
+  font-size: 4vh;
+  text-align: center;
+}
+
+#backBtn {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  -webkit-animation: pageSlideIn 3.5s;
+          animation: pageSlideIn 3.5s;
+  z-index: 1;
+}
+
+#backBtn i {
+  color: #737373;
+  font-size: 1.5em;
+}
+
+nav {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+#navBtn {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: fadeIn 10s;
+          animation: fadeIn 10s;
+}
+
+#navBtn .line {
+  height: 3px;
+  margin: 3px;
+  margin-left: auto;
+  background-color: #f9f9f9;
+}
+
+#navBtn .lineOne {
+  width: 15px;
+}
+
+#navBtn .lineTwo {
+  width: 25px;
+}
+
+#navBtn .lineThree {
+  width: 18px;
+}
+
+#navMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: #0b0b0b;
+  z-index: 500;
+  text-align: center;
+  display: none;
+}
+
+#navMenu ul {
+  -webkit-animation-name: navLinkFadeIn;
+          animation-name: navLinkFadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+#navMenu li {
+  color: #f9f9f9;
+  font-size: 4vh;
+  margin-top: 5px;
+  font-family: "Karla";
+  list-style-type: none;
+  letter-spacing: 1px;
+}
+
+#navMenu li a {
+  color: #737373;
+  text-decoration: none;
+}
+
+#navMenu .underline {
+  height: 1px;
+  width: 50vw;
+  background-color: #737373;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#navMenu #closeMenuBtn {
+  color: #737373;
+  width: 10%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 4vh;
+  font-family: "Montserrat";
+}
+
+#projectsBox {
+  height: auto;
+  width: 100%;
+  margin-top: 75px;
+  padding: 15px;
+  position: absolute;
+}
+
+.project {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.project .project-text {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: #737373;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  letter-spacing: 1.5px;
+}
+
+.project .project-text a {
+  text-decoration: none;
+}
+
+.project .project-text h3 {
+  font-size: 5vh;
+  color: #f9f9f9;
+}
+
+.project .project-text p {
+  color: #737373;
+}
+
+h3, p {
+  opacity: 0;
+  position: relative;
+  bottom: -40px;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  bottom: 0;
+}
+
+footer {
+  background-color: #0b0b0b;
+  padding: 15px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Animations
+*********************************************************/
+@-webkit-keyframes navSlideDown {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 80%;
+  }
+}
+@keyframes navSlideDown {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 80%;
+  }
+}
+
+@-webkit-keyframes navSlideUp {
+  from {
+    height: 80%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@keyframes navSlideUp {
+  from {
+    height: 80%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@-webkit-keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Media Queries 
+*********************************************************/
+/* Extra extra small devices */
+@media only screen and (width: 375px) {
+  #projectsBox h3 {
+    font-size: 3.5vh !important;
+  }
+  li {
+    font-size: 3vh !important;
+  }
+}
+
+@media only screen and (height: 667px) {
+  #projectsBox h3 {
+    font-size: 4.5vh !important;
+  }
+}
+
+/* Extra small devices */
+@media only screen and (width: 411px) {
+  li {
+    font-size: 3vh !important;
+  }
+  #projectsBox h3 {
+    font-size: 3.7vh !important;
+  }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 400px) {
+  #projectsBox {
+    font-size: 3.5vw;
+  }
+}
+
+/* Small devices */
+@media only screen and (min-width: 428px) and (max-width: 540px) {
+  h3 {
+    font-size: 7.5vw !important;
+  }
+  li, #closeMenuBtn {
+    font-size: 3vh !important;
+  }
+}
+
+/* Tablets */
+@media only screen and (width: 768px) {
+  h3 {
+    font-size: 4vh !important;
+    margin: 10% 0 20% 0;
+  }
+  li, #closeMenuBtn {
+    font-size: 2.5vh !important;
+  }
+}
+
+@media only screen and (width: 1024px) {
+  h3 {
+    font-size: 4vh !important;
+    margin: 10% 0 20% 0;
+  }
+  li, #closeMenuBtn {
+    font-size: 2.5vh !important;
+  }
+}
+
+/* Extra Large Devices */
+@media only screen and (min-width: 1200px) {
+  #navMenu {
+    height: 100%;
+  }
+  ul {
+    -webkit-animation: navLinkFadeIn 5s !important;
+            animation: navLinkFadeIn 5s !important;
+  }
+  ul a:hover {
+    color: #f9f9f9 !important;
+  }
+  ul .underline {
+    width: 20vw !important;
+  }
+  #navBtn:hover {
+    cursor: pointer;
+  }
+  #closeMenuBtn:hover {
+    cursor: pointer;
+    color: #f9f9f9 !important;
+  }
+  #projectsBox {
+    margin-top: 3% !important;
+    padding-left: 5% !important;
+  }
+  a {
+    width: 35%;
+  }
+  h3.appear:hover {
+    color: #737373;
+    opacity: 0.9;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  @-webkit-keyframes navSlideDown {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  @keyframes navSlideDown {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  @-webkit-keyframes navSlideUp {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
+  }
+  @keyframes navSlideUp {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
+  }
+  @-webkit-keyframes navLinkFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes navLinkFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+/*# sourceMappingURL=projects_styles.css.map */

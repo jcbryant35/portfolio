@@ -1,0 +1,470 @@
+@import '_reset.scss';
+@import '_variables.scss';
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/code.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    font-family: $font1;
+    letter-spacing: 1px;
+    animation: pageFadeIn 3s ease-out;
+    overflow: hidden;
+
+}
+
+#overLay {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(11, 11, 11, 0.9);
+    position: absolute;
+}
+
+#backBtn {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    animation: pageSlideIn 3.5s;
+    z-index: 1;
+    i {
+        color: $color2;
+        font-size: 1.5em;
+    }
+}
+
+nav {
+    height: 5rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    #logo {
+        height: 100%;
+        width: 80%;
+       h1 {
+        color: $color2;
+        font-size: 3.5vw;
+        margin-left: 15px; 
+        margin-top: 10px;  
+        font-family: $font1;
+        font-weight: 400;
+        }
+        #firstName {
+            color: $color3;
+        }
+    }
+    #navBtn {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation: fadeIn 10s;
+       .line {
+           height: 3px;
+           margin: 3px;
+           margin-left: auto;
+           background-color: $color3;
+       }
+       .lineOne {
+           width: 15px;
+       }
+       .lineTwo {
+           width: 25px;
+       }
+       .lineThree {
+           width: 18px;
+       }
+    }
+}
+
+#navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $color1;
+    z-index: 10;
+    text-align: center;
+    display: none;
+    ul {
+        animation-name: navLinkFadeIn;
+        animation-duration: 3s;
+    }
+    li {
+        color: $color3;
+        font-size: 4vh;
+        margin-top: 5px;
+        font-family: $font2;
+        list-style-type: none;
+        letter-spacing: 1px;
+        a {
+            color: $color2;
+            text-decoration: none;
+        }
+    }
+    .underline {
+        height: 1px;
+        width: 50vw;
+        background-color: $color2;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    #closeMenuBtn {
+        color: $color2;
+        width: 10%;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 4vh;
+        font-family: $font1;
+    }
+}
+
+header {
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    h1 {
+        color: $color2;
+        font-size: 4.5vh;
+        animation: titleSlideDown 2s; 
+    }
+    #highlight {
+        color: $color3
+    }
+}
+
+#skillBox {
+    z-index: 0;
+    margin-top: 30px;
+    margin-left: 35px;
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    h3 {
+        color: $color2;
+    }
+    .syntax {
+        color: $color4;
+    }
+    p {
+        color: $color2;
+    }
+}
+
+.outerBar {
+    height: 10px;
+    width: 200px;
+    outline: 1px dotted $color2;
+    margin-top: 3px;
+}
+
+.html, .css, .js, .rwd, .sass, .bs, .react, .node, .express, .mongo {
+    height: 100%;
+    background-color: rgba(249, 249, 249, 0.6);
+}
+
+.html {
+    width: 90%;
+    animation-name: htmlWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.css {
+    width: 90%;
+    animation-name: cssWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.js {
+    width: 75%;
+    animation-name: jsWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.rwd {
+    width: 95%;
+    animation-name: rwdWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.sass {
+    width: 75%;
+    animation-name: sassWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.bs {
+    width: 75%;
+    animation-name: bsWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.react {
+    width: 60%;
+    animation-name: reactWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.node {
+    width: 50%;
+    animation-name: nodeWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.express {
+    width: 50%;
+    animation-name: expressWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.mongo {
+    width: 40%;
+    animation-name: mongoWidth;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+
+/* Animations 
+************************************************************/
+@keyframes navSlideDown {
+    from {height: 0%;}
+    to {height: 80%;}
+}
+
+@keyframes navSlideUp {
+    from {height: 80%;}
+    to {height: 0%;}
+}
+
+@keyframes navLinkFadeIn {
+    from {opacity: 0;}
+    to {opacity: 10;}
+}
+
+@keyframes pageFadeIn {
+    from {opacity: .95;}
+    to {opacity: 1;}
+}
+
+@keyframes titleSlideDown {
+    0%   { transform: scale(1,1)      translateY(-100px); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(0); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(0px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }  
+}
+
+@keyframes htmlWidth {
+    from {width: 0%;}
+    to {width: 90%;}
+}
+
+@keyframes cssWidth {
+    from {width: 0%;}
+    to {width: 90%;}
+}
+
+@keyframes jsWidth {
+    from {width: 0%;}
+    to {width: 75%;}
+}
+
+@keyframes rwdWidth {
+    from {width: 0%;}
+    to {width: 95%;}
+}
+
+@keyframes sassWidth {
+    from {width: 0%;}
+    to {width: 75%;}
+}
+
+@keyframes bsWidth {
+    from {width: 0%;}
+    to {width: 75%;}
+}
+
+@keyframes reactWidth {
+    from {width: 0%;}
+    to {width: 60%;}
+}
+
+@keyframes nodeWidth {
+    from {width: 0%;}
+    to {width: 50%;}
+}
+
+@keyframes expressWidth {
+    from {width: 0%;}
+    to {width: 50%;}
+}
+
+@keyframes mongoWidth {
+    from {width: 0%;}
+    to {width: 40%;}
+}
+
+
+/* Responsive Media Queries
+*************************************************************/
+@media only screen and (width: 375px) {
+    li {
+        font-size: 3vh !important;
+    }        
+}
+
+/* Extra small devices */ 
+@media only screen and (max-width: 400px) {
+    #skillBox {
+        font-size: 3.5vw;
+    }
+}
+
+/* Extra small devices */
+@media only screen and (width: 411px) {
+    h1 {
+        font-size: 3.7vh !important;
+    }
+    #skillBox {
+        font-size: 3.5vw;
+    }
+    li {
+        font-size: 3vh !important;
+    }
+}
+
+/* Small devices */
+@media only screen and (min-width: 428px) and (max-width: 540px) {
+    h1 {
+        font-size: 4vh !important;
+    }
+    li, #closeMenuBtn {
+        font-size: 3vh !important;
+    }
+}
+
+
+/* Tablets */
+@media only screen and (width: 768px) {
+    #skillBox {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-around;
+         width: 100%;
+         height: 80%;
+         margin: 0;
+    }
+    .boxes {
+         height: 100%;
+         margin-top: 25%;
+    }
+    li, #closeMenuBtn {
+        font-size: 2.5vh !important;
+    }
+}
+
+@media only screen and (width: 1024px) {
+    #skillBox {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-around;
+         width: 100%;
+         height: 80%;
+         margin: 0;
+    }
+    .boxes {
+         height: 100%;
+         margin-top: 25%;
+    }
+    li, #closeMenuBtn {
+        font-size: 2.5vh !important;
+    }
+}
+
+
+/* Extra large devices */
+@media only screen and (min-width: 1200px) {
+    body {
+        overflow: hidden;
+    }
+    #navMenu {
+        height: 100%;
+    }
+    ul {
+        animation: navLinkFadeIn 5s !important;
+        a {
+            &:hover {
+                color: $color3 !important;
+            }
+        }
+        .underline {
+            width: 20vw !important;
+        }
+    }
+    #navBtn {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    #closeMenuBtn {
+        &:hover {
+            cursor: pointer;
+            color: $color3 !important;
+        }
+    }
+
+    #skillBox {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+        margin: 0;
+    }
+    .boxes {
+        margin-left: 25%;
+        height: 100%;
+        margin-top: 10%;
+    }
+    @keyframes navSlideDown {
+        from {height: 0%;}
+        to {height: 100%;}
+    }
+    
+    @keyframes navSlideUp {
+        from {height: 100%;}
+        to {height: 0%;}
+    } 
+
+    @keyframes navLinkFadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+}

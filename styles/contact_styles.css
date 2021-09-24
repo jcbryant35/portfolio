@@ -1,0 +1,555 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/porthome.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat";
+  -webkit-animation: pageFadeIn 2s ease-out;
+          animation: pageFadeIn 2s ease-out;
+}
+
+#overLay {
+  background-color: rgba(11, 11, 11, 0.7);
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  margin-top: 15px;
+  position: absolute;
+}
+
+header h1 {
+  color: #737373;
+  font-size: 5vh;
+}
+
+#backBtn {
+  z-index: 1;
+  height: 3em;
+  width: 5em;
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  -webkit-animation: pageSlideIn 3.5s;
+          animation: pageSlideIn 3.5s;
+  visibility: hidden;
+}
+
+i {
+  color: #737373;
+  font-size: 1.5em;
+}
+
+nav {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+nav #logo {
+  height: 100%;
+  width: 80%;
+}
+
+nav #logo h1 {
+  color: #737373;
+  font-size: 3.5vw;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+nav #logo #firstName {
+  color: #f9f9f9;
+}
+
+nav #navBtn {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: fadeIn 10s;
+          animation: fadeIn 10s;
+  cursor: pointer;
+}
+
+nav #navBtn .line {
+  height: 3px;
+  margin: 3px;
+  margin-left: auto;
+  background-color: #f9f9f9;
+}
+
+nav #navBtn .lineOne {
+  width: 15px;
+}
+
+nav #navBtn .lineTwo {
+  width: 25px;
+}
+
+nav #navBtn .lineThree {
+  width: 18px;
+}
+
+#navMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #0b0b0b;
+  z-index: 1;
+  text-align: center;
+  display: none;
+}
+
+#navMenu ul {
+  -webkit-animation-name: navLinkFadeIn;
+          animation-name: navLinkFadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+#navMenu li {
+  color: #f9f9f9;
+  font-size: 4vh;
+  margin-top: 5px;
+  font-family: "Karla";
+  list-style-type: none;
+  letter-spacing: 1px;
+}
+
+#navMenu li a {
+  color: #737373;
+  text-decoration: none;
+}
+
+#navMenu .underline {
+  height: 1px;
+  width: 50vw;
+  background-color: #737373;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#navMenu #closeMenuBtn {
+  color: #737373;
+  width: 10%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 4vh;
+  font-family: "Montserrat";
+}
+
+#contactBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 14%;
+  padding: 15px;
+  height: auto;
+  width: 100%;
+  background-color: rgba(11, 11, 11, 0.55);
+}
+
+#contactBox .label {
+  color: #737373;
+  font-size: 2vh;
+  line-height: 40px;
+}
+
+input {
+  margin-bottom: 18px;
+  height: 35px;
+  width: 70vw;
+  background-color: #f9f9f9;
+  font-size: 22px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  padding: 15px;
+}
+
+#messageBox {
+  height: 150px;
+  width: 70vw;
+  resize: none;
+  border-radius: 25px;
+  font-size: 22px;
+  padding: 15px;
+  outline: none;
+  border: none;
+}
+
+#submitBtn {
+  background-color: #2d8f8f;
+  padding: 10px 0px 35px 0px;
+  font-size: 3vh;
+  border: none;
+  border-radius: 25px;
+  width: 60%;
+  margin-top: 25px;
+  color: #f9f9f9;
+  margin-left: 20%;
+}
+
+#socialMedia {
+  position: absolute;
+  top: 85vh;
+  font-size: 30px;
+  color: #737373;
+}
+
+#socialMedia i {
+  padding: 20px;
+}
+
+#socialMedia a {
+  text-decoration: none;
+}
+
+/* Animations 
+****************************************************/
+@-webkit-keyframes pageFadeIn {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 10;
+  }
+}
+@keyframes pageFadeIn {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@-webkit-keyframes navSlideDown {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 80%;
+  }
+}
+
+@keyframes navSlideDown {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 80%;
+  }
+}
+
+@-webkit-keyframes navSlideUp {
+  from {
+    height: 80%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@keyframes navSlideUp {
+  from {
+    height: 80%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+/* Responsive Media Queries 
+******************************************************/
+/* Extra extra small devices */
+@media only screen and (width: 375px) {
+  header {
+    margin-top: 7%;
+  }
+  header h1 {
+    font-size: 4vh !important;
+  }
+  #contactBox {
+    margin-top: 10%;
+  }
+  i {
+    font-size: 5vh !important;
+    margin: 0 !important;
+  }
+  li {
+    font-size: 3vh !important;
+  }
+}
+
+/* Small devices */
+@media only screen and (min-width: 428px) and (max-width: 540px) {
+  h1 {
+    font-size: 4vh !important;
+  }
+  #contactBox {
+    height: 60%;
+  }
+  li, #closeMenuBtn {
+    font-size: 3vh !important;
+  }
+}
+
+@media only screen and (height: 667px) {
+  #contactBox {
+    margin-top: 3%;
+  }
+  i {
+    font-size: 5.5vh !important;
+    margin-top: 11% !important;
+  }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 400px) {
+  i {
+    font-size: 8vw;
+    margin-top: 15%;
+  }
+}
+
+/* Extra small devices */
+@media only screen and (width: 411px) {
+  li {
+    font-size: 3vh !important;
+  }
+  header {
+    margin-top: 5%;
+  }
+  header h1 {
+    font-size: 4vh;
+  }
+  #contactBox {
+    margin-top: 10%;
+  }
+  i {
+    font-size: 5vh;
+    margin-top: 7%;
+  }
+}
+
+/* Tablets */
+@media only screen and (width: 768px) {
+  #contactBox {
+    width: 80%;
+    height: 70%;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  li, #closeMenuBtn {
+    font-size: 2.5vh !important;
+  }
+}
+
+@media only screen and (width: 1024px) {
+  header > h1 {
+    font-size: 4vh;
+  }
+  #contactBox {
+    height: 65%;
+    width: 80%;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  input {
+    height: 8%;
+  }
+  #messageBox {
+    height: 40%;
+  }
+  li, #closeMenuBtn {
+    font-size: 2.5vh !important;
+  }
+}
+
+/* Extra large devices */
+@media only screen and (min-width: 1200px) {
+  #navMenu {
+    height: 100%;
+  }
+  ul {
+    -webkit-animation: navLinkFadeIn 5s !important;
+            animation: navLinkFadeIn 5s !important;
+  }
+  ul a:hover {
+    color: #f9f9f9 !important;
+  }
+  ul .underline {
+    width: 20vw !important;
+  }
+  #closeMenuBtn:hover {
+    cursor: pointer;
+    color: #f9f9f9 !important;
+  }
+  #contactBox {
+    width: 27%;
+    height: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 15px;
+  }
+  input {
+    width: 100%;
+    font-size: 1vw;
+  }
+  #messageBox {
+    width: 100%;
+    font-size: 1vw;
+  }
+  #submitBtn {
+    background-color: #2d8f8f;
+    padding: 0;
+    font-size: 2.5vh;
+    border: none;
+    border-radius: 25px;
+    width: 40%;
+    margin-top: 25px;
+    color: #f9f9f9;
+    margin-left: 30%;
+  }
+  #submitBtn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  #socialMedia {
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 81%;
+    font-size: 20px;
+    color: #737373;
+    margin-top: 3.5%;
+  }
+  #socialMedia i:hover {
+    color: #f9f9f9;
+    cursor: pointer;
+  }
+  @-webkit-keyframes navSlideDown {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  @keyframes navSlideDown {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  @-webkit-keyframes navSlideUp {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
+  }
+  @keyframes navSlideUp {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
+  }
+  @-webkit-keyframes navLinkFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes navLinkFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+/*# sourceMappingURL=contact_styles.css.map */

@@ -1,0 +1,422 @@
+@import '_reset.scss';
+@import '_variables.scss';
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/porthome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: $font1;
+    animation: pageFadeIn 2s ease-out;
+}
+
+#overLay {
+    background-color: rgba(11, 11, 11, 0.7);
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    margin-top: 15px;
+    position: absolute;
+    h1 {
+        color: $color2;
+        font-size: 5vh;
+    }
+}
+
+#backBtn {
+    z-index: 1;
+    height: 3em;
+    width: 5em;
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    animation: pageSlideIn 3.5s;
+    visibility: hidden;
+}
+
+i {
+    color: $color2;
+    font-size: 1.5em;
+}
+
+nav {
+    height: 5rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    #logo {
+        height: 100%;
+        width: 80%;
+       h1 {
+        color: $color2;
+        font-size: 3.5vw;
+        margin-left: 15px; 
+        margin-top: 10px;  
+        font-family: $font1;
+        font-weight: 400;
+        }
+        #firstName {
+            color: $color3;
+        }
+    }
+    #navBtn {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation: fadeIn 10s;
+        cursor: pointer;
+       .line {
+           height: 3px;
+           margin: 3px;
+           margin-left: auto;
+           background-color: $color3;
+       }
+       .lineOne {
+           width: 15px;
+       }
+       .lineTwo {
+           width: 25px;
+       }
+       .lineThree {
+           width: 18px;
+       }
+    }
+}
+
+#navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $color1;
+    z-index: 1;
+    text-align: center;
+    display: none;
+    ul {
+        animation-name: navLinkFadeIn;
+        animation-duration: 3s;
+    }
+    li {
+        color: $color3;
+        font-size: 4vh;
+        margin-top: 5px;
+        font-family: $font2;
+        list-style-type: none;
+        letter-spacing: 1px;
+        a {
+            color: $color2;
+            text-decoration: none;
+        }
+    }
+    .underline {
+        height: 1px;
+        width: 50vw;
+        background-color: $color2;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    #closeMenuBtn {
+        color: $color2;
+        width: 10%;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 4vh;
+        font-family: $font1;
+    }
+}
+
+#contactBox {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 14%;
+    padding: 15px;
+    height: auto;
+    width: 100%;
+    background-color: rgba(11, 11, 11, 0.55);
+    .label {
+        color: $color2;
+        font-size: 2vh;
+        line-height: 40px;
+    }
+}
+
+input {
+    margin-bottom: 18px;
+    height: 35px;
+    width: 70vw;
+    background-color: $color3;
+    font-size: 22px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    padding: 15px;
+}
+
+#messageBox {
+    height: 150px;
+    width: 70vw;
+    resize: none;
+    border-radius: 25px;
+    font-size: 22px;
+    padding: 15px;
+    outline: none;
+    border: none;
+}
+
+#submitBtn {
+    background-color: $color4;
+    padding: 10px 0px 35px 0px;
+    font-size: 3vh;
+    border: none;
+    border-radius: 25px;
+    width: 60%;
+    margin-top: 25px;
+    color: $color3;
+    margin-left: 20%;
+}
+
+#socialMedia {
+    position: absolute;
+    top: 85vh;
+    font-size: 30px;
+    color: $color2;
+    i {
+        padding: 20px;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+/* Animations 
+****************************************************/
+@keyframes pageFadeIn {
+    from {opacity: 0.9;}
+    to {opacity: 10;}
+}
+
+@keyframes navSlideDown {
+    from {height: 0%;}
+    to {height: 80%;}
+}
+
+@keyframes navSlideUp {
+    from {height: 80%;}
+    to {height: 0%;}
+}
+
+
+
+/* Responsive Media Queries 
+******************************************************/
+
+/* Extra extra small devices */
+@media only screen and (width: 375px) {
+    header {
+        margin-top: 7%;
+        h1 {
+            font-size: 4vh !important;
+        }
+    }
+    #contactBox {
+        margin-top: 10%;
+    }
+    i {
+        font-size: 5vh !important;
+        margin: 0 !important;
+    }
+    li {
+        font-size: 3vh !important;
+    }        
+}
+
+/* Small devices */
+@media only screen and (min-width: 428px) and (max-width: 540px) {
+    h1 {
+        font-size: 4vh !important;
+    }
+    #contactBox {
+        height: 60%;
+    }
+    li, #closeMenuBtn {
+        font-size: 3vh !important;
+    }
+}
+
+@media only screen and (height: 667px) {
+    #contactBox {
+        margin-top: 3%;
+    }
+    i {
+        font-size: 5.5vh !important;
+        margin-top: 11% !important;
+    }
+}
+
+/* Extra small devices */ 
+@media only screen and (max-width: 400px) {
+    i {
+        font-size: 8vw;
+        margin-top: 15%;
+    }
+}
+
+/* Extra small devices */
+@media only screen and (width: 411px) {
+    li {
+        font-size: 3vh !important;
+    }
+    header {
+        margin-top: 5%;
+        h1 {
+            font-size: 4vh;
+        }
+    }
+    #contactBox {
+        margin-top: 10%;
+    }
+    i {
+        font-size: 5vh;
+        margin-top: 7%;
+    }
+}
+
+/* Tablets */
+@media only screen and (width: 768px) {
+    #contactBox {
+        width: 80%;
+        height: 70%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    li, #closeMenuBtn {
+        font-size: 2.5vh !important;
+    }
+}
+
+@media only screen and (width: 1024px) {
+   header > h1 {
+       font-size: 4vh;
+   }
+    #contactBox {
+        height: 65%;
+        width: 80%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    input {
+        height: 8%;
+    }
+    #messageBox {
+        height: 40%;
+    }
+    li, #closeMenuBtn {
+        font-size: 2.5vh !important;
+    }
+}
+
+/* Extra large devices */
+@media only screen and (min-width: 1200px) {
+    #navMenu {
+        height: 100%;
+    }
+    ul {
+        animation: navLinkFadeIn 5s !important;
+        a {
+            &:hover {
+                color: $color3 !important;
+            }
+        }
+        .underline {
+            width: 20vw !important;
+        }
+    }
+    #closeMenuBtn {
+        &:hover {
+            cursor: pointer;
+            color: $color3 !important;
+        }
+    }
+    #contactBox {
+        width: 27%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+    }
+    input {
+        width: 100%;
+        font-size: 1vw;
+    }
+    #messageBox {
+        width: 100%;
+        font-size: 1vw;
+    } 
+    #submitBtn {
+        background-color: $color4;
+        padding: 0;
+        font-size: 2.5vh;
+        border: none;
+        border-radius: 25px;
+        width: 40%;
+        margin-top: 25px;
+        color: $color3;
+        margin-left: 30%;
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+    
+    #socialMedia {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 81%;
+        font-size: 20px;
+        color: $color2;
+        margin-top: 3.5%;
+        i {
+            &:hover {
+                color: $color3;
+                cursor: pointer;
+            }
+        }
+    }   
+    @keyframes navSlideDown {
+        from {height: 0%;}
+        to {height: 100%;}
+    }
+    
+    @keyframes navSlideUp {
+        from {height: 100%;}
+        to {height: 0%;}
+    } 
+
+    @keyframes navLinkFadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+}
+

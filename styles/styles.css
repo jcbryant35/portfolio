@@ -1,0 +1,484 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Styles
+***********************************************************/
+#wrapper {
+  height: 100vh;
+  width: 100vw;
+  -webkit-animation-name: pageFadeIn;
+          animation-name: pageFadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+#backgroundImage {
+  background-image: url("../images/porthome.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#overLay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(11, 11, 11, 0.7);
+}
+
+nav {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+nav #logo {
+  height: 100%;
+  width: 80%;
+}
+
+nav #logo h1 {
+  color: #737373;
+  font-size: 3.5vw;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+nav #logo #firstName {
+  color: #f9f9f9;
+}
+
+nav #navBtn {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav #navBtn .line {
+  height: 3px;
+  margin: 3px;
+  margin-left: auto;
+  background-color: #f9f9f9;
+}
+
+nav #navBtn .lineOne {
+  width: 15px;
+}
+
+nav #navBtn .lineTwo {
+  width: 25px;
+}
+
+nav #navBtn .lineThree {
+  width: 18px;
+}
+
+#navLinks {
+  display: none;
+}
+
+#navMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #0b0b0b;
+  z-index: 1;
+  text-align: center;
+  display: none;
+}
+
+#navMenu ul {
+  -webkit-animation-name: navLinkFadeIn;
+          animation-name: navLinkFadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+#navMenu li {
+  color: #f9f9f9;
+  font-size: 4vh;
+  margin-top: 5px;
+  font-family: "Karla";
+  list-style-type: none;
+  letter-spacing: 1px;
+}
+
+#navMenu li a {
+  color: #737373;
+  text-decoration: none;
+}
+
+#navMenu .underline {
+  height: 1px;
+  width: 50vw;
+  background-color: #737373;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#navMenu #closeMenuBtn {
+  color: #737373;
+  width: 10%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 4vh;
+  font-family: "Montserrat";
+}
+
+main {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+main h1, main h3 {
+  color: #f9f9f9;
+}
+
+main h1 {
+  font-size: 8vh;
+  font-family: "Montserrat";
+  margin-top: 60px;
+}
+
+main h3 {
+  font-size: 7vw;
+  color: #737373;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+main #portBtn {
+  margin-top: 35px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #2d8f8f;
+  border: none;
+  color: #f9f9f9;
+  text-shadow: 1px 1px 1px #737373;
+  font-size: 15px;
+  letter-spacing: 1px;
+  -webkit-animation-name: portBtnFadeIn;
+          animation-name: portBtnFadeIn;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  visibility: hidden;
+}
+
+main a {
+  width: auto;
+}
+
+#intro:after {
+  content: '';
+  border-right: 3px solid white;
+  -webkit-animation: blink 1s;
+          animation: blink 1s;
+  -webkit-animation-iteration-count: 10;
+          animation-iteration-count: 10;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  padding-right: 8px;
+}
+
+/* Animations
+*******************************************************/
+@-webkit-keyframes navSlideDown {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 80%;
+  }
+}
+@keyframes navSlideDown {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 80%;
+  }
+}
+
+@-webkit-keyframes navSlideUp {
+  from {
+    height: 80%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@keyframes navSlideUp {
+  from {
+    height: 80%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@-webkit-keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@-webkit-keyframes portBtnFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@keyframes portBtnFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@-webkit-keyframes portBtnSlideUp {
+  from {
+    margin-top: 300px;
+  }
+  to {
+    margin-top: 35px;
+  }
+}
+
+@keyframes portBtnSlideUp {
+  from {
+    margin-top: 300px;
+  }
+  to {
+    margin-top: 35px;
+  }
+}
+
+@-webkit-keyframes pageFadeIn {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Responsive Media Queries 
+****************************************************************/
+/* Extra small devices */
+@media only screen and (width: 375px) {
+  #intro {
+    font-size: 5.7vh;
+  }
+  li {
+    font-size: 3vh !important;
+  }
+}
+
+@media only screen and (height: 667px) {
+  #intro {
+    font-size: 7.5vh !important;
+  }
+}
+
+/* Extra small devices */
+@media only screen and (width: 411px) {
+  #intro {
+    font-size: 6vh !important;
+  }
+  li {
+    font-size: 3vh !important;
+  }
+}
+
+/* Small devices */
+@media only screen and (min-width: 428px) and (max-width: 540px) {
+  #intro {
+    font-size: 5.7vh !important;
+    margin: 15% 0 3% 0 !important;
+  }
+  li, #closeMenuBtn {
+    font-size: 3vh !important;
+  }
+}
+
+/* Tablets */
+@media only screen and (width: 768px) {
+  #intro {
+    margin-top: 15% !important;
+  }
+  li, #closeMenuBtn {
+    font-size: 2.5vh !important;
+  }
+}
+
+@media only screen and (width: 1024px) {
+  #intro {
+    margin: 15% 0 3% 0 !important;
+  }
+  #portBtn {
+    font-size: 1.8vh !important;
+  }
+  li, #closeMenuBtn {
+    font-size: 2.5vh !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  nav {
+    margin-top: 15px;
+  }
+  #navBtn {
+    display: none !important;
+  }
+  #logo h1 {
+    font-size: 3vh !important;
+  }
+  #navLinks {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    display: block;
+    margin-top: 10px;
+  }
+  #navLinks a {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-family: "Montserrat";
+    margin-right: 20px;
+    font-weight: 400;
+    width: auto;
+    padding: 10px;
+    letter-spacing: 2px;
+  }
+  #navLinks a:hover {
+    color: #737373;
+    cursor: pointer;
+  }
+  #navLinks .bordered {
+    border: 1px solid #f9f9f9;
+    border-radius: 25px;
+  }
+  #navLinks .bordered:hover {
+    border: 1px solid #737373;
+  }
+  main h3 {
+    font-size: 4vh;
+    margin-left: 10%;
+  }
+  main h1 {
+    font-size: 10vh;
+    text-transform: uppercase;
+  }
+  main a {
+    padding-right: 35px;
+  }
+  main a #portBtn {
+    width: 150px;
+  }
+  main a #portBtn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,829 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/code.png");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat";
+  letter-spacing: 1px;
+  -webkit-animation: pageFadeIn 3s ease-out;
+          animation: pageFadeIn 3s ease-out;
+  overflow: hidden;
+}
+
+#overLay {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(11, 11, 11, 0.9);
+  position: absolute;
+}
+
+#backBtn {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  -webkit-animation: pageSlideIn 3.5s;
+          animation: pageSlideIn 3.5s;
+  z-index: 1;
+}
+
+#backBtn i {
+  color: #737373;
+  font-size: 1.5em;
+}
+
+nav {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+nav #logo {
+  height: 100%;
+  width: 80%;
+}
+
+nav #logo h1 {
+  color: #737373;
+  font-size: 3.5vw;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+nav #logo #firstName {
+  color: #f9f9f9;
+}
+
+nav #navBtn {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: fadeIn 10s;
+          animation: fadeIn 10s;
+}
+
+nav #navBtn .line {
+  height: 3px;
+  margin: 3px;
+  margin-left: auto;
+  background-color: #f9f9f9;
+}
+
+nav #navBtn .lineOne {
+  width: 15px;
+}
+
+nav #navBtn .lineTwo {
+  width: 25px;
+}
+
+nav #navBtn .lineThree {
+  width: 18px;
+}
+
+#navMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #0b0b0b;
+  z-index: 10;
+  text-align: center;
+  display: none;
+}
+
+#navMenu ul {
+  -webkit-animation-name: navLinkFadeIn;
+          animation-name: navLinkFadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+#navMenu li {
+  color: #f9f9f9;
+  font-size: 4vh;
+  margin-top: 5px;
+  font-family: "Karla";
+  list-style-type: none;
+  letter-spacing: 1px;
+}
+
+#navMenu li a {
+  color: #737373;
+  text-decoration: none;
+}
+
+#navMenu .underline {
+  height: 1px;
+  width: 50vw;
+  background-color: #737373;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#navMenu #closeMenuBtn {
+  color: #737373;
+  width: 10%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 4vh;
+  font-family: "Montserrat";
+}
+
+header {
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+header h1 {
+  color: #737373;
+  font-size: 4.5vh;
+  -webkit-animation: titleSlideDown 2s;
+          animation: titleSlideDown 2s;
+}
+
+header #highlight {
+  color: #f9f9f9;
+}
+
+#skillBox {
+  z-index: 0;
+  margin-top: 30px;
+  margin-left: 35px;
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 10%;
+}
+
+#skillBox h3 {
+  color: #737373;
+}
+
+#skillBox .syntax {
+  color: #2d8f8f;
+}
+
+#skillBox p {
+  color: #737373;
+}
+
+.outerBar {
+  height: 10px;
+  width: 200px;
+  outline: 1px dotted #737373;
+  margin-top: 3px;
+}
+
+.html, .css, .js, .rwd, .sass, .bs, .react, .node, .express, .mongo {
+  height: 100%;
+  background-color: rgba(249, 249, 249, 0.6);
+}
+
+.html {
+  width: 90%;
+  -webkit-animation-name: htmlWidth;
+          animation-name: htmlWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.css {
+  width: 90%;
+  -webkit-animation-name: cssWidth;
+          animation-name: cssWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.js {
+  width: 75%;
+  -webkit-animation-name: jsWidth;
+          animation-name: jsWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.rwd {
+  width: 95%;
+  -webkit-animation-name: rwdWidth;
+          animation-name: rwdWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.sass {
+  width: 75%;
+  -webkit-animation-name: sassWidth;
+          animation-name: sassWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.bs {
+  width: 75%;
+  -webkit-animation-name: bsWidth;
+          animation-name: bsWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.react {
+  width: 60%;
+  -webkit-animation-name: reactWidth;
+          animation-name: reactWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.node {
+  width: 50%;
+  -webkit-animation-name: nodeWidth;
+          animation-name: nodeWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.express {
+  width: 50%;
+  -webkit-animation-name: expressWidth;
+          animation-name: expressWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.mongo {
+  width: 40%;
+  -webkit-animation-name: mongoWidth;
+          animation-name: mongoWidth;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+/* Animations 
+************************************************************/
+@-webkit-keyframes navSlideDown {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 80%;
+  }
+}
+@keyframes navSlideDown {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 80%;
+  }
+}
+
+@-webkit-keyframes navSlideUp {
+  from {
+    height: 80%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@keyframes navSlideUp {
+  from {
+    height: 80%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@-webkit-keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@-webkit-keyframes pageFadeIn {
+  from {
+    opacity: .95;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: .95;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes titleSlideDown {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(-100px);
+            transform: scale(1, 1) translateY(-100px);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0);
+            transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(0);
+            transform: scale(0.9, 1.1) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) translateY(0);
+            transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(0px);
+            transform: scale(1, 1) translateY(0px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+
+@keyframes titleSlideDown {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(-100px);
+            transform: scale(1, 1) translateY(-100px);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0);
+            transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(0);
+            transform: scale(0.9, 1.1) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) translateY(0);
+            transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(0px);
+            transform: scale(1, 1) translateY(0px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+
+@-webkit-keyframes htmlWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes htmlWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes cssWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes cssWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes jsWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes jsWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@-webkit-keyframes rwdWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 95%;
+  }
+}
+
+@keyframes rwdWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 95%;
+  }
+}
+
+@-webkit-keyframes sassWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes sassWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@-webkit-keyframes bsWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes bsWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@-webkit-keyframes reactWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes reactWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes nodeWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes nodeWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes expressWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes expressWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes mongoWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes mongoWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+/* Responsive Media Queries
+*************************************************************/
+@media only screen and (width: 375px) {
+  li {
+    font-size: 3vh !important;
+  }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 400px) {
+  #skillBox {
+    font-size: 3.5vw;
+  }
+}
+
+/* Extra small devices */
+@media only screen and (width: 411px) {
+  h1 {
+    font-size: 3.7vh !important;
+  }
+  #skillBox {
+    font-size: 3.5vw;
+  }
+  li {
+    font-size: 3vh !important;
+  }
+}
+
+/* Small devices */
+@media only screen and (min-width: 428px) and (max-width: 540px) {
+  h1 {
+    font-size: 4vh !important;
+  }
+  li, #closeMenuBtn {
+    font-size: 3vh !important;
+  }
+}
+
+/* Tablets */
+@media only screen and (width: 768px) {
+  #skillBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    height: 80%;
+    margin: 0;
+  }
+  .boxes {
+    height: 100%;
+    margin-top: 25%;
+  }
+  li, #closeMenuBtn {
+    font-size: 2.5vh !important;
+  }
+}
+
+@media only screen and (width: 1024px) {
+  #skillBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    height: 80%;
+    margin: 0;
+  }
+  .boxes {
+    height: 100%;
+    margin-top: 25%;
+  }
+  li, #closeMenuBtn {
+    font-size: 2.5vh !important;
+  }
+}
+
+/* Extra large devices */
+@media only screen and (min-width: 1200px) {
+  body {
+    overflow: hidden;
+  }
+  #navMenu {
+    height: 100%;
+  }
+  ul {
+    -webkit-animation: navLinkFadeIn 5s !important;
+            animation: navLinkFadeIn 5s !important;
+  }
+  ul a:hover {
+    color: #f9f9f9 !important;
+  }
+  ul .underline {
+    width: 20vw !important;
+  }
+  #navBtn:hover {
+    cursor: pointer;
+  }
+  #closeMenuBtn:hover {
+    cursor: pointer;
+    color: #f9f9f9 !important;
+  }
+  #skillBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 80%;
+    margin: 0;
+  }
+  .boxes {
+    margin-left: 25%;
+    height: 100%;
+    margin-top: 10%;
+  }
+  @-webkit-keyframes navSlideDown {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  @keyframes navSlideDown {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  @-webkit-keyframes navSlideUp {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
+  }
+  @keyframes navSlideUp {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
+  }
+  @-webkit-keyframes navLinkFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes navLinkFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+/*# sourceMappingURL=skills_styles.css.map */

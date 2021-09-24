@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather App Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7cf3b9a7d2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="./styles/weather_styles.css">
+    </head>
+    <body>
+        <main>
+            <div id="backBtn">
+                <a href="projects.html">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            <nav>
+                <section id="navBtn">
+                    <div class="line lineOne"></div>
+                    <div class="line lineTwo"></div>
+                    <div class="line lineThree"></div>
+                </section>  
+            </nav>
+            <div id="navMenu">
+                <ul>
+                    <div id="closeMenuBtn">X</div>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                        <div class="underline"></div>
+                    <li>
+                        <a href="about.html">ABOUT</a>
+                    <li>
+                        <div class="underline"></div>
+                    <li>
+                        <a href="skills.html">SKILLS</a>
+                    </li>
+                        <div class="underline"></div>
+                    <li>
+                        <a href="projects.html">PROJECTS</a>
+                    </li>
+                        <div class="underline"></div>
+                    <li>
+                        <a href="contact.html">CONTACT</a>
+                    </li>
+                        <div class="underline"></div>
+                </ul>
+            </div>
+            <header>
+                <h1>Weather App</h1>
+            </header>
+            <section id="imageBox">
+                <div id="image">
+                    <div id="screenImg"></div>
+                </div>
+            </section>
+            <section id="description">
+                <h1>Weather App</h1>
+                <article>
+                    <p>
+                        This a very simple weather application
+                        that has the ability to show the current
+                        weather forecast and also the five day
+                        weather forecast. You can search by city
+                        name or via current GPS location. 
+                        <br><br>
+                        This website utilizes the Fetch API, 
+                        and an external third party API called 
+                        'Open Weather Map' to successfully retrieve
+                        accurate weather data and display it to 
+                        the user. 
+                        <br><br>
+                    </p>
+                    <p>
+                        <a href="https://jcbryant35.github.io/weather_page" target="_blank">View Website</a><br>
+                        <a href="https://github.com/jcbryant35/weather_app" target="_blank">View Code</a>
+                    </p>
+                    <h1>{ Technologies }</h1>
+                    <article>
+                        <p id="technology">
+                            HTML5 |
+                            CSS3 |
+                            Sass |
+                            JavaScript |
+                            API's |
+                        </p>
+                    </article>
+                    <section id="plans">
+                        <h1>What's next?</h1>
+                        <br>
+                        <p>
+                            This website was originally designed
+                            to be simple and show examples of working
+                            with external API's, but a design change
+                            and several new data features like humidity, wind speed, 
+                            percipitation percentage, and a radar map
+                            will be implemented soon.
+                        </p>    
+                    </section>
+                </article>
+            </section>
+            <div class="line"></div>
+            <footer>
+                <i class="far fa-copyright"></i>
+                Weather App
+            </footer>
+        </main>
+        <script src="./scripts/weather.js" async defer></script>
+    </body>
+</html>

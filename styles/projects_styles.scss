@@ -1,0 +1,350 @@
+@import '_reset.scss';
+@import '_variables.scss';
+
+body {
+    height: 100vh;
+    background-image: url('../images/porthome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font1;
+    animation: pageFadeIn 2s ease-out;
+}
+
+#overLay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(11, 11, 11, 0.8);
+}
+
+header {
+    padding: 15px 0px 15px 0px; 
+    background-color: $color1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    h1 {
+        color: $color2;
+        font-size: 4vh;
+        text-align: center;
+    }
+
+}
+
+#backBtn {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    animation: pageSlideIn 3.5s;
+    z-index: 1;
+    i {
+        color: $color2;
+        font-size: 1.5em;
+    }
+}
+
+nav {
+    height: 5rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+
+    }
+    #navBtn {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation: fadeIn 10s;
+       .line {
+           height: 3px;
+           margin: 3px;
+           margin-left: auto;
+           background-color: $color3;
+       }
+       .lineOne {
+           width: 15px;
+       }
+       .lineTwo {
+           width: 25px;
+       }
+       .lineThree {
+           width: 18px;
+       }
+}
+
+#navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: $color1;
+    z-index: 500;
+    text-align: center;
+    display: none;
+    ul {
+        animation-name: navLinkFadeIn;
+        animation-duration: 3s;
+    }
+    li {
+        color: $color3;
+        font-size: 4vh;
+        margin-top: 5px;
+        font-family: $font2;
+        list-style-type: none;
+        letter-spacing: 1px;
+        a {
+            color: $color2;
+            text-decoration: none;
+        }
+    }
+    .underline {
+        height: 1px;
+        width: 50vw;
+        background-color: $color2;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    #closeMenuBtn {
+        color: $color2;
+        width: 10%;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 4vh;
+        font-family: $font1;
+    }
+}
+
+#projectsBox {
+    height: auto;
+    width: 100%; 
+    margin-top: 75px; 
+    padding: 15px;
+    position: absolute;
+
+}
+
+.project {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    .project-text {
+        height: 100%;
+        width: 100%; 
+        position: relative;
+        color: $color2;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        letter-spacing: 1.5px;
+        a {
+            text-decoration: none;
+        }
+        h3 {
+            font-size: 5vh;
+            color: $color3;
+        }
+        p {
+            color: $color2;
+        }
+    }
+}
+
+h3, p {
+    opacity: 0;
+    position: relative;
+    bottom: -40px;
+    transition: all 0.8s ease-out;
+}
+
+.appear {
+    opacity: 1;
+    bottom: 0;
+}
+
+footer {
+    background-color: $color1;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+
+/* Animations
+*********************************************************/
+@keyframes navSlideDown {
+    from {height: 0%;}
+    to {height: 80%;}
+}
+
+@keyframes navSlideUp {
+    from {height: 80%;}
+    to {height: 0%;}
+}
+
+@keyframes navLinkFadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes pageFadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+/* Responsive Media Queries 
+*********************************************************/
+/* Extra extra small devices */
+@media only screen and (width: 375px) {
+    #projectsBox {
+        h3 {
+            font-size: 3.5vh !important;
+        }
+    }
+    li {
+        font-size: 3vh !important;
+    }        
+}
+
+@media only screen and (height: 667px) {
+    #projectsBox{
+        h3 {
+            font-size: 4.5vh !important;
+        }
+    }
+}
+
+/* Extra small devices */
+@media only screen and (width: 411px) {
+    li {
+        font-size: 3vh !important;
+    }
+    #projectsBox {
+        h3 {
+            font-size: 3.7vh !important;
+        }
+    }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 400px) {
+    #projectsBox {
+        font-size: 3.5vw;
+    }
+}
+
+/* Small devices */
+@media only screen and (min-width: 428px) and (max-width: 540px) {
+    h3 {
+        font-size: 7.5vw !important;
+    }
+    li, #closeMenuBtn {
+        font-size: 3vh !important;
+    }
+}
+
+/* Tablets */ 
+@media only screen and (width: 768px) {
+    h3 {
+        font-size: 4vh !important;
+        margin: 10% 0 20% 0;
+    }
+    li, #closeMenuBtn {
+        font-size: 2.5vh !important;
+    }
+}
+
+@media only screen and (width: 1024px) {
+    h3 {
+        font-size: 4vh !important;
+        margin: 10% 0 20% 0;
+    }
+    li, #closeMenuBtn {
+        font-size: 2.5vh !important;
+    }
+}
+
+/* Extra Large Devices */
+@media only screen and (min-width: 1200px) {
+    #navMenu {
+        height: 100%;
+    }
+    ul {
+        animation: navLinkFadeIn 5s !important;
+        a {
+            &:hover {
+                color: $color3 !important;
+            }
+        }
+        .underline {
+            width: 20vw !important;
+        }
+    }
+    #navBtn {
+        &:hover {
+            cursor:pointer;
+        }
+    }
+    #closeMenuBtn {
+        &:hover {
+            cursor: pointer;
+            color: $color3 !important;
+        }
+    }
+    #projectsBox {
+        margin-top: 3% !important;
+        padding-left: 5% !important;
+    }
+    a {
+        width: 35%;
+    }
+    h3.appear {
+        &:hover {
+            color: $color2;
+            opacity: 0.9;
+            transition: opacity 2s;
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }  
+    }
+    @keyframes navSlideDown {
+        from {height: 0%;}
+        to {height: 100%;}
+    }
+    
+    @keyframes navSlideUp {
+        from {height: 100%;}
+        to {height: 0%;}
+    } 
+
+    @keyframes navLinkFadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+}
