@@ -34,7 +34,7 @@ const form = document.getElementById('contactForm');
 let sender = document.getElementById('name');
 let email = document.getElementById('email');
 let message = document.getElementById('messageBox');
-const url = `http://localhost:8080/email`;
+const url = `https://portemailserver.herokuapp.com/email`;
 
 form.addEventListener('submit', e => {
     e.preventDefault();
