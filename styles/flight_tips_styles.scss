@@ -136,28 +136,52 @@ header {
 }
 
 #imageBox {
-    height: 35%;
+    height: auto; //35%;
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: $color1; 
     animation: imageFade 3s ease-in-out;
+    //border: 1px solid red;
     #image {
-        height: auto;
-        width: 100%;
+        height: 400px;//auto;
+        width: 400px;//100%;
+        //border: 1px solid green;
         background-image: url('../images/laptop.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        //border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #imgWrapper {
+            //border: 1px solid blue;
+            height: 185px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            background-color: $color1;
+        
+        }
         #screenImg {
-            margin-top: 25px;
-            margin-left: 53px;
-            height: 190px;
-            width: 310px;
+            //margin-top: 5%;//25px;
+            //margin-left: 10%; //53px;
+
+            //margin-bottom: 3%; //removed
+            //border: 15px solid purple !important;
+            //height: 170px !important;//70%; //190px;
+            //width: 263px !important;//75%; //310px;
+            height: 95%;
+            width: 95%;
             background-image: url('../images/flight_tips.PNG');
             background-position: center;
-            background-size: cover;
-            background-color: $color3;
+            background-size: cover; //changed from cover
+            background-repeat: no-repeat; //added
+            background-color: $color1;
+            //background-attachment: fixed; //added
         }
     }
 }
@@ -278,32 +302,32 @@ h1, p {
 *******************************************************/
 /* Extra extra small devices */
 @media only screen and (width: 360px) {
-    #screenImg {
+    /*#screenImg {
         width: 73% !important;
         height: 72% !important;
-        margin-top: 7% !important;
-        margin-left: 14% !important;
+        //margin-top: 7% !important;
+        //margin-left: 14% !important;
     }   
-}
+}*/
 @media only screen and (width: 375px) {
-    #screenImg {
+    /*#screenImg {
         width: 73% !important;
         height: 63% !important;
         margin-top: 12% !important;
         margin-left: 14% !important;
-    }
+    }*/
     li {
         font-size: 3vh !important;
     }
 }
 
 @media only screen and (height: 667px) {
-    #screenImg {
+    /*#screenImg {
         width: 73% !important;
         height: 72% !important;
         margin-top: 7% !important;
         margin-left: 14% !important;
-    }
+    }*/
 }
 
 /* Extra extra small devices */
@@ -314,12 +338,12 @@ h1, p {
 }
 
 @media only screen and (width: 411px) and (height: 823px) {
-    #screenImg {
+    /*#screenImg {
         width: 73% !important;
         height: 70% !important;
         margin-top: 9% !important;
         margin-left: 14% !important;
-    }
+    }*/
     #navMenu {
         z-index: 2;
     }
@@ -336,12 +360,12 @@ h1, p {
     #navMenu {
         z-index: 2;
     }
-    #screenImg {
+    /*#screenImg {
         margin-top: 4% !important;
         margin-left: 21% !important;
         width: 59% !important;
         height: 77% !important;
-    }
+    }*/
 }
 
 /* Tablets */
@@ -352,12 +376,12 @@ h1, p {
     #navMenu {
         z-index: 2;
     }
-    #screenImg {
+    /*#screenImg {
         margin-top: 4% !important;
         margin-left: 21% !important;
         width: 59% !important;
         height: 77% !important;
-    }
+    }*/
 }
 
 /* Extra large devices */
@@ -388,7 +412,7 @@ h1, p {
     #closeMenuBtn {
         width: 3% !important;
     }
-    #imageBox {
+    /*#imageBox {
         width: 100%;
         max-height: auto;
         display: flex;
@@ -407,8 +431,8 @@ h1, p {
             margin-bottom: 15px !important;
             display: flex;
             max-width: 70% !important; 
-            height: 77% !important;
-        }
+            //height: 77% !important;
+        }*/
         article > p {
             padding: 5% 30% 0 30%;
         }
@@ -434,4 +458,4 @@ h1, p {
         to {height: 0%;}
     }              
 }
-        
+}
