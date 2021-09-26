@@ -28,7 +28,7 @@ main {
 }
 
 #overLay {
-  background-color: rgba(11, 11, 11, 0.7);
+  background-color: rgba(11, 11, 11, 0.5);
   height: 100vh;
   width: 100vw;
 }
@@ -158,7 +158,7 @@ nav #navBtn .lineThree {
 
 #navMenu li {
   color: #f9f9f9;
-  font-size: 4vh;
+  font-size: 3.5vh;
   margin-top: 5px;
   font-family: "Karla";
   list-style-type: none;
@@ -184,7 +184,7 @@ nav #navBtn .lineThree {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 4vh;
+  font-size: 3.5vh;
   font-family: "Montserrat";
 }
 
@@ -246,7 +246,7 @@ input {
 
 #socialMedia {
   position: absolute;
-  top: 85vh;
+  top: 80vh;
   font-size: 30px;
   color: #737373;
 }
