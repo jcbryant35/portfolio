@@ -45,24 +45,6 @@ nav {
   z-index: 1;
 }
 
-nav #logo {
-  height: 100%;
-  width: 80%;
-}
-
-nav #logo h1 {
-  color: #737373;
-  font-size: 3.5vw;
-  margin-left: 15px;
-  margin-top: 10px;
-  font-family: "Montserrat";
-  font-weight: 400;
-}
-
-nav #logo #firstName {
-  color: #f9f9f9;
-}
-
 nav #navBtn {
   height: 40px;
   width: 40px;
@@ -168,7 +150,7 @@ nav #navBtn .lineThree {
 
 header h1 {
   color: #737373;
-  font-size: 12vh;
+  font-size: 10vh;/*12vh;*/
   padding: 25% 0 20% 10%;
 }
 
