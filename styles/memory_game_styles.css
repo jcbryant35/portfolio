@@ -456,7 +456,8 @@ h1, p {
     overflow-x: hidden;
   }
   header h1 {
-    padding: 10%;
+    padding: 10% 0 5% 10%;
+    font-size: 13vh;
   }
   #navBtn:hover {
     cursor: pointer;
