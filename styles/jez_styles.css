@@ -11,6 +11,7 @@ body {
   width: 100vw;
   font-family: "Montserrat";
   letter-spacing: 1px;
+  overflow-x: hidden; //added
   -webkit-animation: pageFadeIn 2s;
           animation: pageFadeIn 2s;
 }
@@ -475,7 +476,8 @@ h1, p {
     overflow-x: hidden;
   }
   header h1 {
-    padding: 10%;
+    padding: 10% 0 5% 10%;
+    font-size: 13vh !important;
   }
   #navBtn:hover {
     cursor: pointer;
