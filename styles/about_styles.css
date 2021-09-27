@@ -53,24 +53,6 @@ nav {
   top: 0;
 }
 
-nav #logo {
-  height: 100%;
-  width: 80%;
-}
-
-nav #logo h1 {
-  color: #737373;
-  font-size: 3.5vw;
-  margin-left: 15px;
-  margin-top: 10px;
-  font-family: "Montserrat";
-  font-weight: 400;
-}
-
-nav #logo #firstName {
-  color: #f9f9f9;
-}
-
 nav #navBtn {
   height: 40px;
   width: 40px;
@@ -200,7 +182,7 @@ nav #navBtn .lineThree {
 
 #bioContainer h1 {
   color: #737373;
-  font-size: 2.8vh;
+  font-size: 2.5vh;
   padding: 5px;
   letter-spacing: 1.5px;
   font-family: "Montserrat";
