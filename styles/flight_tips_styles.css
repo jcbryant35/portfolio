@@ -530,7 +530,7 @@ h1, p {
   }
   header h1 {
     padding: 5%;
-    font-size: 12vh !important;
+    font-size: 15vh !important;
   }
   #navBtn:hover {
     cursor: pointer;
