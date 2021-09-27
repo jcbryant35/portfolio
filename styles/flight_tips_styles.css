@@ -11,7 +11,7 @@ body {
   width: 100vw;
   font-family: "Montserrat";
   letter-spacing: 1px;
-  overflow-x: hidden; //added
+  overflow-x: hidden; 
   -webkit-animation: pageFadeIn 2s;
           animation: pageFadeIn 2s;
 }
@@ -460,15 +460,77 @@ h1, p {
 }
 
 @media only screen and (width: 360px) {
-  /* Extra large devices */
-}
-
-@media only screen and (width: 360px) and (min-width: 1200px) {
   body {
     overflow-x: hidden;
   }
   header h1 {
     padding: 5%;
+  }
+  #navBtn:hover {
+    cursor: pointer;
+  }
+  #navMenu {
+    height: 100%;
+    z-index: 2;
+  }
+  #navMenu a:hover, #navMenu #closeMenuBtn:hover {
+    color: #f9f9f9;
+    cursor: pointer;
+  }
+  #closeMenuBtn {
+    width: 3% !important;
+  }
+  
+  article > p {
+    padding: 5% 30% 0 30%;
+  }
+  article > p a:hover {
+    opacity: 0.8;
+  }
+  #plans {
+    padding: 5% 30% 0 30%;
+  }
+  @-webkit-keyframes navSlideDown {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  @keyframes navSlideDown {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  @-webkit-keyframes navSlideUp {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
+  }
+  @keyframes navSlideUp {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+  header h1 {
+    padding: 5%;
+    font-size: 12vh !important;
   }
   #navBtn:hover {
     cursor: pointer;
