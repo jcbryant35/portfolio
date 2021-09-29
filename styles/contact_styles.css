@@ -245,7 +245,7 @@ input {
 }
 
 #socialMedia {
-  position: relative; /*fixed;*/ /*absolute;*/
+  position: relative !important; /*fixed;*/ /*absolute;*/
   /*top: 80vh;*/
   font-size: 30px;
   color: #737373;
