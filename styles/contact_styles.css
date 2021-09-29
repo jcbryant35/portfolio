@@ -227,13 +227,12 @@ input {
 }
 
 #socialMedia {
- /* position: absolute;
-  top: 80vh;*/
+  position: absolute;
+  top: 80vh;
   border: 5px solid red;
   font-size: 30px;
   color: #737373;
   z-index: 100; 
-  padding-bottom: 0 !important; /*test*/
 }
 
 #socialMedia i {
