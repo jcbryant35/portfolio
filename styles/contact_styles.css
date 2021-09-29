@@ -245,11 +245,11 @@ input {
 }
 
 #socialMedia {
-  position: relative !important; /*fixed;*/ /*absolute;*/
-  /*top: 80vh;*/
+  position: absolute;
+  top: 80vh;
   font-size: 30px;
   color: #737373;
-  z-index: 100; // Test
+  z-index: 100; 
 }
 
 #socialMedia i {
