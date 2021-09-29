@@ -6,7 +6,7 @@
 }
 
 main {
-  min-height: 100vh; /*test min*/
+  height: 100vh; 
   width: 100vw;
   background-image: url("../images/porthome.jpg");
   background-size: cover;
@@ -227,8 +227,8 @@ input {
 }
 
 #socialMedia {
-  position: absolute;
-  top: 80vh;
+  position: relative;/*absolute;*/
+  /*top: 80vh;*/
   font-size: 30px;
   color: #737373;
   z-index: 100; 
