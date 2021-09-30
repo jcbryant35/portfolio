@@ -179,6 +179,7 @@ nav #navBtn .lineThree {
       -ms-flex-pack: center;
           justify-content: center;
   flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 14%;
   padding: 15px;
