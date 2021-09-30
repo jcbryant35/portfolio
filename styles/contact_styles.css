@@ -230,8 +230,8 @@ input {
 }
 
 #socialMedia {
-  position: static; /*relative;*/ /*absolute;*/
-  /*top: 80vh;*/
+  position: relative; /*absolute;*/
+  top: 10;
   font-size: 30px;
   color: #737373;
   /*z-index: 100; */
