@@ -5,9 +5,13 @@
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+}
 
 main {
-  height: 100vh;
+  height: 100%; /*100vh;*/
   width: 100vw;
   background-image: url("../images/porthome.jpg");
   background-size: cover;
