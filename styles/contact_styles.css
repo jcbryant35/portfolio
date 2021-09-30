@@ -229,8 +229,9 @@ input {
 }
 
 #socialMedia {
-  position: absolute;
+ /* position: absolute;*/
   /*bottom: 80vh*/
+  display: flex;
   font-size: 30px;
   color: #737373;
 }
