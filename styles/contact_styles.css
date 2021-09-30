@@ -7,7 +7,6 @@
 
 
 main {
-  position: fixed; /* test*/
   height: 100vh;
   width: 100vw;
   background-image: url("../images/porthome.jpg");
@@ -33,7 +32,6 @@ main {
   background-color: rgba(11, 11, 11, 0.5);
   height: 100vh;
   width: 100vw;
-  position: fixed; /*test*/
 }
 
 header {
@@ -233,7 +231,7 @@ input {
 
 #socialMedia {
   position: relative; /*absolute;*/
-  top: 10; /*80vh*/
+  bottom: 10; /*80vh*/
   font-size: 30px;
   color: #737373;
   /*z-index: 100; */
