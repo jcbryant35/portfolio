@@ -238,7 +238,7 @@ input {
 
 #socialMedia {
   position: relative;
-  top: 80vh
+  top: 80vh;
   display: flex;
   font-size: 30px;
   color: #737373;
