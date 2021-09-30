@@ -5,13 +5,8 @@
   padding: 0;
 }
 
-body {
-  height: 100vh;
-  width: 100vw;
-}
-
 main {
-  height: 100%; /*100vh;*/
+  height: 100vh;
   width: 100vw;
   background-image: url("../images/porthome.jpg");
   background-size: cover;
@@ -34,7 +29,7 @@ main {
 
 #overLay {
   background-color: rgba(11, 11, 11, 0.5);
-  height: 100%; /*100vh;*/
+  height: 100vh;
   width: 100vw;
 }
 
@@ -234,11 +229,10 @@ input {
 }
 
 #socialMedia {
-  position: relative; /*absolute;*/
-  bottom: 15%; /*80vh*/
+  position: absolute;
+  /*bottom: 80vh*/
   font-size: 30px;
   color: #737373;
-  /*z-index: 100; */
 }
 
 #socialMedia i {
