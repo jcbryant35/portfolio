@@ -5,9 +5,7 @@
   padding: 0;
 }
 
-body:focus {
-  position: fixed; 
-}
+
 main {
   height: 100vh;
   width: 100vw;
@@ -230,7 +228,7 @@ input {
 }
 
 #socialMedia {
-  position: absolute;
+  position: relative; /*absolute;*/
   top: 80vh;
   font-size: 30px;
   color: #737373;
