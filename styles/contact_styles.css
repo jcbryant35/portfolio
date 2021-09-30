@@ -17,6 +17,7 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
